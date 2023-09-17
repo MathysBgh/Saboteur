@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1618919063 source:c:\users\user\desktop\ece\info\projet s2\yesysysys\main.c
+	<allegro.h>
+	<stdio.h>
+	<stdlib.h>
+
+1621763889 source:c:\users\user\desktop\ece\info\projet s2\saboteur\main.c
+	<allegro.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1621944336 source:c:\users\naus4\desktop\saboteur\main.c
+	<allegro.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1622034354 source:c:\users\zans\desktop\saboteur\saboteur backup 26.05\main.c
+	<allegro.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1622363365 source:c:\users\zans\desktop\saboteur\saboteur courrant\main.c
+	<allegro.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<Math.h>
+
+1622364165 source:c:\users\mathy\onedrive\bureau\saboteur courrant\main.c
+	<allegro.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<Math.h>
+
+1622360565 source:c:\users\mathy\onedrive\bureau\ing1\informatique\saboteur courrant\main.c
+	<allegro.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<Math.h>
+

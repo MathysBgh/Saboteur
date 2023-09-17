@@ -1,0 +1,75 @@
+
+1  Score: 0  Role: S
+2  Score: 0  Role: M
+3  Score: 6  Role: M
+4  Score: 6  Role: M
+
+
+1  Score: 0  Role: S
+2  Score: 0  Role: M
+3  Score: 6  Role: M
+4  Score: 6  Role: M
+
+
+1  Score: 0  Role: S
+2  Score: 0  Role: M
+3  Score: 6  Role: M
+4  Score: 6  Role: M
+
+
+1  Score: 0  Role: S
+2  Score: 0  Role: M
+3  Score: 6  Role: M
+4  Score: 6  Role: M
+
+
+1  Score: 0  Role: S
+2  Score: 0  Role: M
+3  Score: 6  Role: M
+4  Score: 6  Role: M
+
+
+1  Score: 0  Role: S
+2  Score: 0  Role: M
+3  Score: 6  Role: M
+4  Score: 6  Role: M
+
+
+1  Score: 0  Role: S
+2  Score: 0  Role: M
+3  Score: 6  Role: M
+4  Score: 6  Role: M
+
+
+aesgnrytezdgnds  Score: 0  Role: M
+sryjnszyhstyjws  Score: 0  Role: S
+
+
+1  Score: 0  Role: M
+2  Score: 0  Role: M
+3  Score: 6  Role: M
+4  Score: 12  Role: S
+
+
+JEAN  Score: 0  Role: M
+zizi  Score: 6  Role: S
+ewfgarhta  Score: 0  Role: M
+wgwrthgwtrhjwty  Score: 0  Role: M
+
+
+JEAN  Score: 0  Role: M
+zizi  Score: 6  Role: S
+ewfgarhta  Score: 0  Role: M
+wgwrthgwtrhjwty  Score: 0  Role: M
+
+
+JEAN  Score: 0  Role: M
+zizi  Score: 6  Role: S
+ewfgarhta  Score: 0  Role: M
+wgwrthgwtrhjwty  Score: 0  Role: M
+
+
+qerhtwj5edyjyje  Score: 0  Role: S
+srthwsrjytjetyj  Score: 0  Role: M
+wrshtarthwrthrt  Score: 0  Role: M
+

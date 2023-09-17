@@ -1,0 +1,77 @@
+void deplacement_logo(BITMAP* temp, BITMAP* tete[10], t_players player[5], int tab[7][5], int oldturn)
+{
+    BITMAP* buffer2 = create_bitmap(SCREEN_W, SCREEN_H);
+
+    ///position d'arrivee
+    int x_nouveau = (int)850+((mouse_x-800)/100)*100;//en coordeonnes[800,1600]
+    int y_nouveau = (int)225+((mouse_y-150)/150)*150;
+
+    ///position intiale
+    int x_logo = (int)(player[oldturn].position_x-800)/100;//position du logo en [0,6]
+    int y_logo = (int)(player[oldturn].position_y-150)/150;//de meme pour 0,1,2,3,4
+
+    int i=0;
+    ///recherche du meilleur trajet x_position -> x_carte_posee, y_position -> y_carte_posee
+    while((player[oldturn].position_y != y_nouveau || player[oldturn].position_x != x_nouveau) && i<600)
+    {
+        draw_sprite(buffer2, temp, 0, 0);//dessine le'cran sauvegarder
+        draw_sprite(buffer2, tete[player[oldturn].head], player[oldturn].position_x-22, player[oldturn].position_y-22);
+
+        ///cas simple aligne
+        if(player[oldturn].position_x < x_nouveau && player[oldturn].position_y == y_nouveau)
+            player[oldturn].position_x++;//en coordeonnes[800,1600]
+
+        if(player[oldturn].position_x > x_nouveau && player[oldturn].position_y == y_nouveau)
+            player[oldturn].position_x--;
+
+        if(player[oldturn].position_y < y_nouveau && player[oldturn].position_x == x_nouveau)
+            player[oldturn].position_y++;
+
+        if(player[oldturn].position_y > y_nouveau && player[oldturn].position_x == x_nouveau)
+            player[oldturn].position_y--;
+
+        ///cas complique avec un changement de direction
+        if(player[oldturn].position_x < x_nouveau && player[oldturn].position_y < y_nouveau)//si l'arrivve est en bas a droite
+        {
+            if(tab[x_logo+1][y_logo]==1 || tab[x_logo+1][y_logo]==2 || tab[x_logo+1][y_logo]==4)
+                player[oldturn].position_x++;
+
+            if(tab[x_logo][y_logo+1]==1 || tab[x_logo][y_logo+1]==3 || tab[x_logo][y_logo+1]==4)
+                player[oldturn].position_y++;
+        }
+
+        if(player[oldturn].position_x < x_nouveau && player[oldturn].position_y > y_nouveau)//si l'arrivve est en haut a droite
+        {
+            if(tab[x_logo+1][y_logo]==1 || tab[x_logo+1][y_logo]==2 || tab[x_logo+1][y_logo]==4)
+                player[oldturn].position_x++;
+
+            if(tab[x_logo][y_logo-1]==1 || tab[x_logo][y_logo-1]==3)
+                player[oldturn].position_y--;
+        }
+
+        if(player[oldturn].position_x > x_nouveau && player[oldturn].position_y > y_nouveau)//si l'arrivve est en haut a gauche
+        {
+            if(tab[x_logo-1][y_logo]==1 || tab[x_logo-1][y_logo]==2 || tab[x_logo-1][y_logo]==3 ||tab[x_logo-1][y_logo]==4)
+                player[oldturn].position_x--;
+
+            if(tab[x_logo][y_logo-1]==1 || tab[x_logo][y_logo-1]==3)
+                player[oldturn].position_y--;
+        }
+
+        if(player[oldturn].position_x > x_nouveau && player[oldturn].position_y < y_nouveau)//si l'arrivve est en bas a gauche
+        {
+            if(tab[x_logo-1][y_logo]==1 || tab[x_logo-1][y_logo]==2 || tab[x_logo-1][y_logo]==3 ||tab[x_logo-1][y_logo]==4)
+                player[oldturn].position_x--;
+
+            if(tab[x_logo][y_logo+1]==1 || tab[x_logo][y_logo+1]==4)
+                player[oldturn].position_y++;
+        }
+
+
+        i++;//sortie si le programe bug (ce que est probable)
+        draw_sprite(screen, buffer2, 0, 0);
+        clear(buffer2);
+    }
+    player[oldturn].position_x = x_nouveau;
+    player[oldturn].position_y = y_nouveau;
+}
